@@ -1,12 +1,12 @@
 #include <opencv2/opencv.hpp>
+#include "grabcut.h"
 
 
 int main()
 {
-	cv::Mat input = cv::imread("assets\\JPEGImages\\2007_000032.jpg");
-	cv::imshow("input", input);
-
-	cv::waitKey();
+	grabcut("assets\\JPEGImages\\2007_000033.jpg",
+		"assets\\masks\\2007_000033.jpg",
+		"assets\\SegmentationObject\\2007_000033.png");
 
 	return 0;
 }
